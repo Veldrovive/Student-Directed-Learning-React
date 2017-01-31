@@ -113,9 +113,18 @@
 	    value: function render() {
 	      console.log(this.props.all.test.testValue);
 	      return _react2.default.createElement(
-	        'p',
-	        { onClick: this.testAction },
-	        'Hello World!'
+	        'div',
+	        { className: _Index2.default.mainContent },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Welcome to a test!'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Sup'
+	        )
 	      );
 	    }
 	  }]);

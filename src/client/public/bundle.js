@@ -31694,10 +31694,12 @@
 	
 	
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "._Index__mainContent___33z0j{\n  min-height: 100%;\n  width: 100%;\n  background-color: grey;\n  position: absolute;\n}\n", ""]);
 	
 	// exports
-
+	exports.locals = {
+		"mainContent": "_Index__mainContent___33z0j"
+	};
 
 /***/ },
 /* 295 */

@@ -36,7 +36,10 @@ class App extends React.Component {
   render () {
     console.log(this.props.all.test.testValue)
     return(
-      <p onClick={this.testAction}>Hello World!</p>
+      <div className={styles.mainContent}>
+        <h1>Welcome to a test!</h1>
+        <p>Sup</p>
+      </div>
     )
   }
 }

@@ -1,6 +1,23 @@
-.mainContent{
+.mainPage{
   min-height: 100%;
   width: 100%;
-  background-color: grey;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent{
+  flex: 1 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.spacer{
+  flex: 0 1 5em;
+}
+
+.pageContent{
+  position: relative;
+  flex: 1 0 auto;
+  box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);
 }

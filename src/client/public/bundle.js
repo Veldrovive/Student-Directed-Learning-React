@@ -75,7 +75,9 @@
 	
 	var _Index2 = _interopRequireDefault(_Index);
 	
-	var _actions = __webpack_require__(/*! ../actions */ 297);
+	var _BasePage = __webpack_require__(/*! ./BasePage */ 297);
+	
+	var _actions = __webpack_require__(/*! ../actions */ 301);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -114,16 +116,27 @@
 	      console.log(this.props.all.test.testValue);
 	      return _react2.default.createElement(
 	        'div',
-	        { className: _Index2.default.mainContent },
+	        { className: _Index2.default.mainPage },
+	        _react2.default.createElement(_BasePage.Header, null),
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Welcome to a test!'
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          'Sup'
+	          'div',
+	          { className: _Index2.default.mainContent },
+	          _react2.default.createElement('div', { className: _Index2.default.spacer }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: _Index2.default.pageContent },
+	            _react2.default.createElement(
+	              'h1',
+	              { onClick: this.testAction },
+	              'Welcome to a test!'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Sup'
+	            )
+	          ),
+	          _react2.default.createElement('div', { className: _Index2.default.spacer })
 	        )
 	      );
 	    }
@@ -31694,11 +31707,14 @@
 	
 	
 	// module
-	exports.push([module.id, "._Index__mainContent___33z0j{\n  min-height: 100%;\n  width: 100%;\n  background-color: grey;\n  position: absolute;\n}\n", ""]);
+	exports.push([module.id, "._Index__mainPage___1O1dx{\n  min-height: 100%;\n  width: 100%;\n  position: absolute;\n  display: flex;\n  flex-direction: column;\n}\n\n._Index__mainContent___33z0j{\n  flex: 1 0 auto;\n  display: flex;\n  position: relative;\n}\n\n._Index__spacer___1CIEC{\n  flex: 0 1 5em;\n}\n\n._Index__pageContent___iQ6fu{\n  position: relative;\n  flex: 1 0 auto;\n  box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
-		"mainContent": "_Index__mainContent___33z0j"
+		"mainPage": "_Index__mainPage___1O1dx",
+		"mainContent": "_Index__mainContent___33z0j",
+		"spacer": "_Index__spacer___1CIEC",
+		"pageContent": "_Index__pageContent___iQ6fu"
 	};
 
 /***/ },
@@ -32017,6 +32033,140 @@
 
 /***/ },
 /* 297 */
+/*!*****************************************************!*\
+  !*** ./src/client/app/components/BasePage/index.js ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Header = undefined;
+	
+	var _Header = __webpack_require__(/*! ./Header.jsx */ 298);
+	
+	var _Header2 = _interopRequireDefault(_Header);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.Header = _Header2.default;
+
+/***/ },
+/* 298 */
+/*!*******************************************************!*\
+  !*** ./src/client/app/components/BasePage/Header.jsx ***!
+  \*******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = undefined;
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Header = __webpack_require__(/*! ./css/_Header.css */ 299);
+	
+	var _Header2 = _interopRequireDefault(_Header);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Header = function (_React$Component) {
+	  _inherits(Header, _React$Component);
+	
+	  function Header() {
+	    _classCallCheck(this, Header);
+	
+	    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
+	
+	    _this.render = _this.render.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(Header, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: _Header2.default.header },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Hello'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Header;
+	}(_react2.default.Component);
+	
+	exports.default = Header;
+
+/***/ },
+/* 299 */
+/*!************************************************************!*\
+  !*** ./src/client/app/components/BasePage/css/_Header.css ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !./../../../../../../~/css-loader?{"modules":true,"localIdentName":"[name]__[local]___[hash:base64:5]"}!./_Header.css */ 300);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ./../../../../../../~/style-loader/addStyles.js */ 296)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../../../node_modules/css-loader/index.js?{\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\"}!./_Header.css", function() {
+				var newContent = require("!!./../../../../../../node_modules/css-loader/index.js?{\"modules\":true,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\"}!./_Header.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 300 */
+/*!*************************************************************************************************************************************************!*\
+  !*** ./~/css-loader?{"modules":true,"localIdentName":"[name]__[local]___[hash:base64:5]"}!./src/client/app/components/BasePage/css/_Header.css ***!
+  \*************************************************************************************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ./../../../../../../~/css-loader/lib/css-base.js */ 295)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "._Header__header___b0WbK{\n  flex: 0 0 auto;\n  top: 0;\n  position: relative;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  max-height: 3em;\n  min-height: 2em;\n  background-color: #9e0b0f;\n}\n", ""]);
+	
+	// exports
+	exports.locals = {
+		"header": "_Header__header___b0WbK"
+	};
+
+/***/ },
+/* 301 */
 /*!*****************************************!*\
   !*** ./src/client/app/actions/index.js ***!
   \*****************************************/
@@ -32029,12 +32179,12 @@
 	});
 	exports.changeValue = undefined;
 	
-	var _TestAction = __webpack_require__(/*! ./TestAction.js */ 298);
+	var _TestAction = __webpack_require__(/*! ./TestAction.js */ 302);
 	
 	exports.changeValue = _TestAction.changeValue; //This imports and combines all the actions to allow easier access to them
 
 /***/ },
-/* 298 */
+/* 302 */
 /*!**********************************************!*\
   !*** ./src/client/app/actions/TestAction.js ***!
   \**********************************************/

@@ -31707,7 +31707,7 @@
 	
 	
 	// module
-	exports.push([module.id, "._Index__mainPage___1O1dx{\n  min-height: 100%;\n  width: 100%;\n  position: absolute;\n  display: flex;\n  flex-direction: column;\n}\n\n._Index__mainContent___33z0j{\n  flex: 1 0 auto;\n  display: flex;\n  position: relative;\n}\n\n._Index__spacer___1CIEC{\n  flex: 0 1 5em;\n}\n\n._Index__pageContent___iQ6fu{\n  position: relative;\n  flex: 1 0 auto;\n  box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);\n}\n", ""]);
+	exports.push([module.id, "._Index__mainPage___1O1dx{\n  min-height: 100%;\n  width: 100%;\n  position: absolute;\n  display: flex;\n  flex-direction: column;\n}\n\n._Index__mainContent___33z0j{\n  flex: 1 0 auto;\n  display: flex;\n  position: relative;\n}\n\n._Index__spacer___1CIEC{\n  flex: 0 1 5em;\n}\n\n._Index__pageContent___iQ6fu{\n  position: relative;\n  flex: 1 0 auto;\n  box-shadow: 0px 0 8px 0px rgba(0,0,0,0.4), 0px 0 8px 0px rgba(0,0,0,0.4);\n}\n", ""]);
 	
 	// exports
 	exports.locals = {

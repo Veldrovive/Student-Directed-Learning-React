@@ -13,6 +13,8 @@ import store from '../store.js'
 
 import styles from './_Index.css'
 
+import {Header} from './BasePage'
+
 import {changeValue} from '../actions'
 
 @connect((store) => {
@@ -36,9 +38,16 @@ class App extends React.Component {
   render () {
     console.log(this.props.all.test.testValue)
     return(
-      <div className={styles.mainContent}>
-        <h1>Welcome to a test!</h1>
-        <p>Sup</p>
+      <div className={styles.mainPage}>
+        <Header />
+        <div className={styles.mainContent}>
+          <div className={styles.spacer}></div>
+          <div className={styles.pageContent}>
+            <h1 onClick={this.testAction}>Welcome to a test!</h1>
+            <p>Sup</p>
+          </div>
+          <div className={styles.spacer}></div>
+        </div>
       </div>
     )
   }
